@@ -12,6 +12,7 @@ Steps
 
 Deployed to Vercel:
  - https://jp-lrn-003-create-llama-nextjs.vercel.app/
+ - Note: you have to upload the .env file to create the required env variables needed by the app. 
 
 
 # -------------------------------------------------------------------------------

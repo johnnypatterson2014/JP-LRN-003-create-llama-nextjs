@@ -37,4 +37,5 @@ next-env.d.ts
 
 output/
 
-/.cache/
+# let's check in the cache so that the app will run in vercel without having to regenerate the docs
+# /.cache/

@@ -1,71 +1,31 @@
-This is a [LlamaIndex](https://www.llamaindex.ai/) project using [Next.js](https://nextjs.org/) bootstrapped with [`create-llama`](https://github.com/run-llama/LlamaIndexTS/tree/main/packages/create-llama).
+# JP-LRN-003-create-llama-nextjs
 
-## Getting Started
+https://www.npmjs.com/package/create-llama
 
-First, install the dependencies:
+npx create-llama@latest
 
-```
-npm install
-```
+PS L:\_github> npx create-llama@latest
+√ What is your project named? ... create-llama-example
+√ What app do you want to build? » 🤖 Agentic RAG
+√ What language do you want to use? » Typescript (NextJS)
+√ Do you want to use LlamaCloud services? ... No / Yes
+√ Please provide your OpenAI API key (leave blank to skip): ... 
+√ How would you like to proceed? » Just generate code (~1 sec)
+Creating a new LlamaIndex app in L:\_github\create-llama-example.
 
-Second, generate the embeddings of the documents in the `./data` directory:
+Using npm.
 
-```
-npm run generate
-```
+Initializing project with template: streaming 
 
-Third, run the development server:
 
-```
-npm run dev
-```
+Using vector DB: none
+Created '.env' file. Please check the settings.
+Copying data from path: C:\Users\Johnny\AppData\Local\npm-cache\_npx\7bfc2205dda2d438\node_modules\create-llama\dist\templates\components\data\101.pdf
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Success! Created create-llama-example at L:\_github\create-llama-example
+Now have a look at the README.md (​file://L:\_github\create-llama-example/README.md​) and learn how to get started.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Using Docker
 
-1. Build an image for the Next.js app:
 
-```
-docker build -t <your_app_image_name> .
-```
-
-2. Generate embeddings:
-
-Parse the data and generate the vector embeddings if the `./data` folder exists - otherwise, skip this step:
-
-```
-docker run \
-  --rm \
-  -v $(pwd)/.env:/app/.env \ # Use ENV variables and configuration from your file-system
-  -v $(pwd)/config:/app/config \
-  -v $(pwd)/data:/app/data \
-  -v $(pwd)/cache:/app/cache \ # Use your file system to store the vector database
-  <your_app_image_name> \
-  npm run generate
-```
-
-3. Start the app:
-
-```
-docker run \
-  --rm \
-  -v $(pwd)/.env:/app/.env \ # Use ENV variables and configuration from your file-system
-  -v $(pwd)/config:/app/config \
-  -v $(pwd)/cache:/app/cache \ # Use your file system to store gea vector database
-  -p 3000:3000 \
-  <your_app_image_name>
-```
-
-## Learn More
-
-To learn more about LlamaIndex, take a look at the following resources:
-
-- [LlamaIndex Documentation](https://docs.llamaindex.ai) - learn about LlamaIndex (Python features).
-- [LlamaIndexTS Documentation](https://ts.llamaindex.ai) - learn about LlamaIndex (Typescript features).
-
-You can check out [the LlamaIndexTS GitHub repository](https://github.com/run-llama/LlamaIndexTS) - your feedback and contributions are welcome!

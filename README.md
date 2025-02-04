@@ -4,14 +4,34 @@ https://www.npmjs.com/package/create-llama
 Steps
  -      npx create-llama@latest // run the example project template builder (choose nextjs instead of fastapi)
  -      npm install // install the modules and packages
- -      run wsl (windows shell for linux) since the generate script won't work in a regular cmd shell
- -      npm run generate // will convert any files in the ./data/ folder into embeddings and load into vector store
+ -      run wsl (windows shell for linux) since the generate script won't work in a regular cmd shell. You only need to do this once.
+ -      npm run generate // will convert any files in the ./data/ folder into embeddings and load into vector store. You only need to do this once, or anytime you add new files to the /data folder
  -      npm run dev  // run the dev server
  -      http://localhost:3000/     // dev server should be up and running
 
 
+Deployed to Vercel:
+ - https://jp-lrn-003-create-llama-nextjs.vercel.app/
 
 
+# -------------------------------------------------------------------------------
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    525 kB          630 kB
+├ ○ /_not-found                          986 B           107 kB
+├ ƒ /api/chat                            151 B           106 kB
+├ ƒ /api/chat/config                     151 B           106 kB
+├ ƒ /api/chat/config/llamacloud          151 B           106 kB
+├ ƒ /api/chat/upload                     151 B           106 kB
+├ ƒ /api/files/[...slug]                 151 B           106 kB
+└ ƒ /api/sandbox                         151 B           106 kB
++ First Load JS shared by all            106 kB
+  ├ chunks/4bd1b696-d81b40d3908bb6c3.js  53 kB
+  ├ chunks/517-581dde426bb2d8c2.js       50.6 kB
+  └ other shared chunks (total)          2.01 kB
+
+
+# -------------------------------------------------------------------------------
 # Readme file generated from template
 
 This is a [LlamaIndex](https://www.llamaindex.ai/) project using [Next.js](https://nextjs.org/) bootstrapped with [`create-llama`](https://github.com/run-llama/LlamaIndexTS/tree/main/packages/create-llama).

@@ -17,6 +17,7 @@ Deployed to Vercel:
 
 # -------------------------------------------------------------------------------
 
+```
 Route (app)                              Size     First Load JS
 ┌ ○ /                                    525 kB          630 kB
 ├ ○ /_not-found                          986 B           107 kB
@@ -30,7 +31,7 @@ Route (app)                              Size     First Load JS
   ├ chunks/4bd1b696-d81b40d3908bb6c3.js  53 kB
   ├ chunks/517-581dde426bb2d8c2.js       50.6 kB
   └ other shared chunks (total)          2.01 kB
-
+```
 
 ## code flow
 
